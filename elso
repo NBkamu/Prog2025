@@ -20,7 +20,7 @@ jatek_szam = 0
 nem_talaltDB = 0
 
 #kitalalandó szám beállítása
-
+kitalalando_szam=input()
 
 
 
