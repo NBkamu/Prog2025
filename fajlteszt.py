@@ -56,7 +56,11 @@ else:
 i=0
 while (i<len(verseny_adatok and int(verseny_adatok[i].split(";")[1]))>=90):
     i+=1
-if i<len(verseny_adatok):
+if i==len(verseny_adatok):
+    print("Van")
+else:
+    print("Nem")
+    
 
 
 
