@@ -42,4 +42,29 @@ for i in range(1, len(verseny_adatok)):
 print(f"{db} versenyző nem szerzett mép pontot.\n")
 
 #----------------------------------------------------------
-#2. 
+#2. Van-e Fernando nevű versenyző?
+
+i = 0
+while (i<len(verseny_adatok) and "Fernando" not in verseny_adatok[i]):
+    i+=1
+if (i<len(verseny_adatok)):
+    print("Van fernando nevű versenyző")
+else:
+    print("Nincs Fernando nevű versenyző")
+
+# 2.B Mindenki szerzett-e már 90 pontot?
+i=0
+while (i<len(verseny_adatok and int(verseny_adatok[i].split(";")[1]))>=90):
+    i+=1
+if i<len(verseny_adatok):
+
+
+
+
+
+
+
+
+
+
+print("Itt a program vége")
