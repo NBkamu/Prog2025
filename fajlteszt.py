@@ -54,15 +54,27 @@ else:
 
 # 2.B Mindenki szerzett-e már 90 pontot?
 i=0
-while (i<len(verseny_adatok and int(verseny_adatok[i].split(";")[1]))>=90):
+while i<len(verseny_adatok) and int(verseny_adatok[i].split(",")[1])>=90:
     i+=1
 if i==len(verseny_adatok):
     print("Van")
 else:
     print("Nem")
     
+3.#Melyik istálló pilótája a Yuki Tsunoda?
+i=0
+while verseny_adatok[i].split(",")[0]!="Yuki Tsunoda":
+    i+=1
+print("Yuki Tsunoda a",verseny_adatok[i].split(",")[2])
 
-
+4.#Melyik csapatban volt Pierre Gasly
+i=1
+while i<=len(verseny_adatok) and "Pierre Gasly" not in verseny_adatok[i]:
+    i+=1
+if i<len(verseny_adatok):
+    print("Pierre Gasly",verseny_adatok[i].split(",")[2].strip(), "csapatban van!")
+else:
+    print("Nincs ilyen versenyző")
 
 
 
