@@ -76,9 +76,20 @@ if i<len(verseny_adatok):
 else:
     print("Nincs ilyen versenyző")
 
-
-
-
+5.#Számolja ki a versenyzők pontszámámak átlagát
+S=0
+for i in range(1, len(verseny_adatok)):
+    S+=int(verseny_adatok[i].split(",")[1])
+print(f"a versenyzők pontszámainak átlaga: {S/len(verseny_adatok)-1}") 
+    
+6.#
+maxi=1
+max=verseny_adatok[i].split(",")[1]
+for i in range(3,len(verseny_adatok)):
+    if verseny_adatok[i]>verseny_adatok[maxi]:
+        maxi=i
+        max=verseny_adatok[i]    
+print(max)
 
 
 
