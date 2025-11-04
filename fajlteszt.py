@@ -91,6 +91,14 @@ for i in range(3,len(verseny_adatok)):
         max=verseny_adatok[i]    
 print(max)
 
+7.#Min kiválasztás
+mini=1
+min=verseny_adatok[i].split(",")[1]
+for i in range(2,len(verseny_adatok)):
+    if verseny_adatok[i]<verseny_adatok[mini]:
+        mini=i
+        min=verseny_adatok[i]
+print("A legkevesebb ponttal rendelkező versenyző: ", verseny_adatok[mini].split(",")[0])
 
 
 
