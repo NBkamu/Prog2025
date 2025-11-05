@@ -100,6 +100,12 @@ for i in range(2,len(verseny_adatok)):
         min=verseny_adatok[i]
 print("A legkevesebb ponttal rendelkező versenyző: ", verseny_adatok[mini].split(",")[0])
 
-
-
+#8.Kiválógatás (másik listába) ki van mclaren-be
+db1=0
+masik_lista=[]
+for i in range(2,len(verseny_adatok)):
+    if verseny_adatok[i].split(",")[3]=="McLaren":
+        db1+=1
+        masik_lista[db1]=verseny_adatok[i].split(",")[0]
+print(f"Ennyi versenyző van a McLaren-be",{verseny_adatok[i].split(",")[1]})
 print("Itt a program vége")
