@@ -104,8 +104,25 @@ print("A legkevesebb ponttal rendelkező versenyző: ", verseny_adatok[mini].spl
 db1=0
 masik_lista=[]
 for i in range(2,len(verseny_adatok)):
-    if verseny_adatok[i].split(",")[3]=="McLaren":
+    if verseny_adatok[i].split(",")[2].strip()=="McLaren":
         db1+=1
-        masik_lista[db1]=verseny_adatok[i].split(",")[0]
-print(f"Ennyi versenyző van a McLaren-be",{verseny_adatok[i].split(",")[1]})
+        masik_lista[db1].append(verseny_adatok[i].split(",")[0])
+print("McLaren",masik_lista)
 print("Itt a program vége")
+
+#9. Szétválogatás
+#kinek nincs pontja?
+dby=0
+dbx=0
+y=[]
+x=[]
+for i in range(1,len(verseny_adatok)):
+    if(int(verseny_adatok[i].split(",")[1])>0):
+        dby+=1
+        y.append(verseny_adatok[i].split(",")[0])
+    else:
+        dbx+=1
+        x.append(verseny_adatok[i].split(",")[0])
+print(f"Van pontja: {y} \n\n , nincs pontja: {x}")
+
+            
