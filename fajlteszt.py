@@ -125,4 +125,16 @@ for i in range(1,len(verseny_adatok)):
         x.append(verseny_adatok[i].split(",")[0])
 print(f"Van pontja: {y} \n\n , nincs pontja: {x}")
 
-            
+#12. rendezés minimum kiválasztásos növekvő sorrendbe
+for i in range(1,len(verseny_adatok)-1):
+    mini=i
+    minertek=int(verseny_adatok[i].split(",")[1])
+    for j in range(i+1,len(verseny_adatok)):
+        if int(verseny_adatok[j].split(",")[1])<int(verseny_adatok[mini].split(",")[1]):
+            mini=j
+    if mini!=i:
+        verseny_adatok[i],verseny_adatok[mini]=verseny_adatok[mini],verseny_adatok[i]
+for i in verseny_adatok:
+    print(i)
+#----------------------------------------------------------
+
